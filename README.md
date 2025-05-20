@@ -1,36 +1,77 @@
-Drug Prediction for Patients using Machine Learning
+🧠 Drug Prediction for Patients using Machine Learning
+This repository contains a machine learning model developed to predict the most appropriate drug treatment for patients based on their clinical and biochemical profiles. The system integrates data-driven healthcare and artificial intelligence to support decision-making in personalized medicine.
 
-This repository contains a machine learning model developed to predict the most appropriate drug treatment for patients based on their clinical and biochemical profiles. The model leverages patient data—comprising 18 key biochemical parameters (such as glucose, urea, creatinine, ALT, AST, CRP, hemoglobin, etc.)—to predict potential diseases and recommend drug treatments accordingly.
+📊 Project Overview
+The model utilizes 2,900 anonymized patient records, each containing 18 critical biochemical parameters such as:
 
-The dataset includes 2,900 patient records, each labeled with one of the following disease classes:
+Glucose
+Urea
+Creatinine
+ALT (Alanine Transaminase)
+AST (Aspartate Transaminase)
+CRP (C-Reactive Protein)
+Hemoglobin
+TSH
+WBC (White Blood Cell count) and others relevant to disease diagnosis.
 
-Class 0: Renal Failure,
-Class 1: Anemia,
-Class 2: Diabetes,
-Class 3: Hypercholesterolemia,
-Class 4: Hyperthyroidism,
-Class 5: Hypothyroidism,
-Class 6: Heart Attack,
-Class 7: Pneumonia,
-Class 8: Healthy
+These parameters are used to predict a disease class and provide drug recommendations based on clinical pharmacological guidelines.
 
-This is a retrospective study, and we used anonymized patient records collected from January 1, 2020, to June 1, 2024. The study was approved by the Ethics Committee of Atatürk University Research Hospital, and all necessary ethical permissions were obtained.
+🏥 Study Design
+Type of Study: Retrospective
+Data Source: Patient records from Atatürk University Research Hospital
+Study Period: January 1, 2020 – June 1, 2024
+Ethical Approval: Approved by the Ethics Committee of Atatürk University Research Hospital
+All necessary ethical permissions were obtained prior to data analysis.
 
-The project was conducted in collaboration with my last-term pharmacy student, Cansu Çelik.
+👩‍🔬 This study was conducted in collaboration with my last-term pharmacy student, Cansu Çelik.
 
-A classification model was implemented using Python and TensorFlow. The core model is a Deep Neural Network (DNNClassifier) trained to accurately predict the disease class from the input biochemical data and subsequently map it to an appropriate drug recommendation, based on clinical pharmacological guidelines.
+🧬 Disease Classification
+Each patient record is labeled with one of the following 9 disease classes:
 
-After disease classification, our model suggests drug recommendations tailored to each predicted disease class by analyzing the patient's biochemical and clinical parameters. The recommendations are rule-based and informed by standard clinical guidelines:
+Class	Disease
+0	Renal Failure
+1	Anemia
+2	Diabetes
+3	Hypercholesterolemia
+4	Hyperthyroidism
+5	Hypothyroidism
+6	Heart Attack
+7	Pneumonia
+8	Healthy
 
-Class 0 – Renal Failure: Suggested treatments include ACE inhibitors (e.g., Enalapril), ARBs, phosphate binders, and erythropoiesis-stimulating agents, depending on creatinine, urea, potassium, and hemoglobin levels.
-Class 1 – Anemia: Recommended therapies include oral or IV iron supplements (e.g., Ferrous Sulfate), Vitamin B12, or Erythropoietin depending on the anemia type (iron-deficiency, megaloblastic, etc.).
-Class 2 – Diabetes: Recommended medications include Metformin, Insulin, DPP-4 inhibitors, or SGLT2 inhibitors, guided by glucose, HbA1c, and kidney function parameters.
-Class 3 – Hypercholesterolemia: Suggested drugs are Statins (e.g., Atorvastatin, Rosuvastatin), possibly combined with Ezetimibe or PCSK9 inhibitors based on LDL-C and total cholesterol levels.
-Class 4 – Hyperthyroidism: Recommended treatments include Antithyroid drugs (e.g., Methimazole or Propylthiouracil), and in some cases beta-blockers for symptom control.
-Class 5 – Hypothyroidism: Standard therapy includes Levothyroxine, with dosage adjusted based on TSH and free T4 levels.
-Class 6 – Heart Attack (Myocardial Infarction): Drug recommendations include Aspirin, Clopidogrel, Beta-blockers, ACE inhibitors, and Statins, depending on troponin, ECG data, and blood pressure.
-Class 7 – Pneumonia: Empirical antibiotics are suggested, such as Amoxicillin-clavulanate, Azithromycin, or Ceftriaxone, tailored to CRP, WBC count, and radiological findings.
-Class 8 – Healthy: No drug recommendation; patient is advised to continue routine health monitoring and preventive care.
+🤖 Technical Implementation
+Programming Language: Python
+Framework: TensorFlow
+Model: Deep Neural Network (DNNClassifier)
+Purpose: Multiclass classification of diseases and drug recommendation mapping
+The DNNClassifier model was trained using normalized biochemical parameters as input features. It outputs a predicted disease class label, which is then used to generate rule-based drug recommendations.
 
-Check out the full code, notebooks, and project details here:
-🔗 https://github.com/SciHun/Drug-Prediction-for-Patients
+💊 Drug Recommendation System
+After the disease is predicted, the model provides personalized drug suggestions based on standard clinical treatment protocols. Recommendations are tailored to the patient’s biochemical state and associated disease class:
+
+🔹 Class 0 – Renal Failure
+Drugs: ACE inhibitors (e.g., Enalapril), ARBs, Phosphate binders, Erythropoiesis-stimulating agents
+Based on: Elevated creatinine, urea, electrolyte imbalance, and low hemoglobin
+🔹 Class 1 – Anemia
+Drugs: Ferrous sulfate (oral/IV), Vitamin B12, Erythropoietin
+Based on: Low hemoglobin, hematocrit, and iron indices
+🔹 Class 2 – Diabetes
+Drugs: Metformin, Insulin, DPP-4 inhibitors, SGLT2 inhibitors
+Based on: Elevated glucose, HbA1c (if available), and renal function
+🔹 Class 3 – Hypercholesterolemia
+Drugs: Statins (e.g., Atorvastatin), Ezetimibe, PCSK9 inhibitors
+Based on: High total cholesterol, LDL levels
+🔹 Class 4 – Hyperthyroidism
+Drugs: Methimazole, Propylthiouracil, Beta-blockers (e.g., Propranolol)
+Based on: Suppressed TSH, elevated free T4 or T3
+🔹 Class 5 – Hypothyroidism
+Drugs: Levothyroxine
+Based on: Elevated TSH, low free T4
+🔹 Class 6 – Heart Attack (Myocardial Infarction)
+Drugs: Aspirin, Clopidogrel, Beta-blockers, ACE inhibitors, Statins
+Based on: Elevated troponin, ECG data, abnormal CRP, and blood pressure values
+🔹 Class 7 – Pneumonia
+Drugs: Empirical antibiotics – Amoxicillin-clavulanate, Azithromycin, or Ceftriaxone
+Based on: High CRP, WBC count, fever, and clinical signs (if available)
+🔹 Class 8 – Healthy
+Recommendation: No drug suggested; patient considered clinically normal. Routine monitoring advised.
