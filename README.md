@@ -76,6 +76,6 @@ Based on: High CRP, WBC count, fever, and clinical signs (if available)
 🔹 Class 8 – Healthy
 Recommendation: No drug suggested; patient considered clinically normal. Routine monitoring advised.
 ## 💡 Authors
-🔬 Harun Un, PhD – Clinical Biochemist & Data Scientist  
-🔬 Cansu Celik, BSc – Pharmacist
+🔬 Harun Un, PhD – Clinical Biochemist & Data Scientist
+🔬 Cansu Celik, BSc – Pharmacist 
 🔬 Berivan Aslan, BSc – Pharmacist
