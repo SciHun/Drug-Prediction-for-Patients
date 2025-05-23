@@ -18,6 +18,7 @@ WBC (White Blood Cell count) and others relevant to disease diagnosis.
 These parameters are used to predict a disease class and provide drug recommendations based on clinical pharmacological guidelines.
 
 🏥 Study Design
+
 Type of Study: Retrospective
 Data Source: Patient records from Atatürk University Research Hospital
 Study Period: January 1, 2020 – June 1, 2024
@@ -27,30 +28,32 @@ All necessary ethical permissions were obtained prior to data analysis.
 This repository contains a machine learning model developed to predict the most appropriate drug treatment for patients based on their clinical and biochemical profiles. The system integrates data-driven healthcare and artificial intelligence to support decision-making in personalized medicine.
 
 🧬 Disease Classification
+
 Each patient record is labeled with one of the following 9 disease classes:
 
-Class	Disease
+Class -	Disease
 
-0	Renal Failure
+0 -	Renal Failure
 
-1	Anemia
+1 -	Anemia
 
-2	Diabetes
+2 -	Diabetes
 
-3	Hypercholesterolemia
+3 -	Hypercholesterolemia
 
-4	Hyperthyroidism
+4 -	Hyperthyroidism
 
-5	Hypothyroidism
+5 -	Hypothyroidism
 
-6	Heart Attack
+6 -	Heart Attack
 
-7	Pneumonia
+7 -	Pneumonia
 
-8	Healthy
+8 -	Healthy
 
 
 🤖 Technical Implementation
+
 Programming Language: Python
 Framework: TensorFlow
 Model: Deep Neural Network (DNNClassifier)
@@ -58,6 +61,7 @@ Purpose: Multiclass classification of diseases and drug recommendation mapping
 The DNNClassifier model was trained using normalized biochemical parameters as input features. It outputs a predicted disease class label, which is then used to generate rule-based drug recommendations.
 
 💊 Drug Recommendation System
+
 After the disease is predicted, the model provides personalized drug suggestions based on standard clinical treatment protocols. Recommendations are tailored to the patient’s biochemical state and associated disease class:
 
 🔹 Class 0 – Renal Failure
