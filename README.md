@@ -1,6 +1,6 @@
 🧠 Drug Prediction for Patients using Machine Learning
 
-This study was conducted in collaboration with my last-term pharmacy students, 👩‍🔬Cansu Çelik and 👩‍🔬Berivan Aslan.
+This study was conducted in collaboration with my last-term pharmacy students, 👩‍🔬Cansu Celik and 👩‍🔬Berivan Aslan.
 
 📊 Project Overview
 The model utilizes 2,900 anonymized patient records, each containing 18 critical biochemical parameters such as:
