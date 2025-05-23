@@ -23,7 +23,7 @@ Study Period: January 1, 2020 – June 1, 2024
 Ethical Approval: Approved by the Ethics Committee of Atatürk University Research Hospital
 All necessary ethical permissions were obtained prior to data analysis.
 
-👩‍🔬 This study was conducted in collaboration with my last-term pharmacy student, Cansu Çelik.
+👩‍🔬 This study was conducted in collaboration with my last-term pharmacy students, Cansu Çelik and Berivan Aslan.
 
 🧬 Disease Classification
 Each patient record is labeled with one of the following 9 disease classes:
@@ -78,3 +78,4 @@ Recommendation: No drug suggested; patient considered clinically normal. Routine
 ## 💡 Authors
 🔬 Harun Un, PhD – Clinical Biochemist & Data Scientist  
 🔬 Cansu Celik, BSc – Pharmacist
+🔬 Berivan Aslan, BSc – Pharmacist
